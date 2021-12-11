@@ -14,7 +14,8 @@ class Token:
         print('*****')
 
 class Error:
-    def __init__(self, descripcion, tipo, linea, columna):
+    def __init__(self,caracter, descripcion, tipo, linea, columna):
+        self.caracter = caracter
         self.descripcion = descripcion
         self.tipo = tipo
         self.linea = linea
@@ -22,6 +23,7 @@ class Error:
 
     def getInfo(self):
         print('*****')
+        print('Caracter: ', self.caracter)
         print('Descripcion: ', self.descripcion)
         print('Tipo: ', self.tipo)
         print('Linea: ', self.linea)

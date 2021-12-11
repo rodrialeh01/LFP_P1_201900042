@@ -5,6 +5,8 @@ from tkinter import *
 from typing import runtime_checkable
 from Reproductor import VentanaReproductor
 from AnalizadorLexico import AnalizadorLexico
+from ReporteTokens import *
+from ReporteErrores import *
 
 #VENTANA
 ventana = tk.Tk()
@@ -50,8 +52,12 @@ def analizar():
     a = AnalizadorLexico()
     a.analizar(contenido)
     a.imprimir()
-    ventana.destroy()    
-    VentanaReproductor()
+    if len(a.listaErrores) == 0:
+        ventana.destroy()   
+        generararchivoT(a.listaTokens)
+        VentanaReproductor()
+    else:
+        generararchivoE(a.listaErrores,a.listaTokens)
 
 
 #BOTON DE CARGAR ARCHIVO

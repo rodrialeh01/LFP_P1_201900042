@@ -2,7 +2,7 @@ list = 'mi lista 2021 :D' > (
 	{
 		nombr : 'cancion1',
 		artita: 'u2',
-		ruta : 'C:\Musica\cancion1.mp3',
+		ruta : 'C:\Musica\cancion1.mp3",
 		genero : 'genero1',
 		repetir: 2,
 		anio : 2015
@@ -11,21 +11,21 @@ list = 'mi lista 2021 :D' > (
 		nombre : 'cancion2',
 		ruta : 'C:\Musica\cancion2.mp3',
 		repetir: 2,		
-		artista: 'Viento en contra',
+		artsta: "Viento en contra',
 		anio : 2017
 	},{
 		ruta: 'C:\Musica\cancion3.mp3',
 		repetir: 2,
 		genero : 'genero3',
 		nombre : 'cancion3',
-		año : 2021,
+		ao : 2021,
 		artista: 'JBalvin'
 	},{
 		repetir: 2,
 		artista: 'Metallica',
 		nombre : 'cancion4',
 		ruta : 'C:\Musica\cancion4.mp3',
-		anio : 2010,
+		ani : 2010,
 		genero : 'genero4'
 	}
 );
