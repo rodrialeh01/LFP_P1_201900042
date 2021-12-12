@@ -148,7 +148,7 @@ class AnalizadorLexico:
                 elif caracter == '"':
                     buffer += caracter
                     columna += 1
-                    self.listaErrores.append(Error(buffer, buffer + " la escritura de la cadena es incorrecta.", 'lexico', linea, columna))
+                    self.listaErrores.append(Error(buffer,"La forma de escritura de la cadena es incorrecta.", 'lexico', linea, columna))
                     buffer = ''
                     estado = 'A'
                 else:
@@ -168,7 +168,7 @@ class AnalizadorLexico:
                 elif caracter == "'":
                     buffer += caracter
                     columna += 1
-                    self.listaErrores.append(Error(buffer, buffer + " la escritura de la cadena es incorrecta.", 'lexico', linea, columna))
+                    self.listaErrores.append(Error(buffer, "La forma de escritura de la cadena es incorrecta.", 'lexico', linea, columna))
                     buffer = ''
                     estado = 'A'
                 else:
@@ -186,21 +186,16 @@ class AnalizadorLexico:
                     indice -= 1
                     estado = 'A'
             indice += 1
-
-    def imprimir(self):
-        print('Tokens')
-        for token in self.listaTokens:
-            token.getInfo()
-        print()
-        print('Errores')
-        for token in self.listaErrores:
-            token.getInfo()
-        print()
-        print("Cantidad de tokens: " + str(len(self.listaTokens)))
-        print("Cantidad de errores: " + str(len(self.listaErrores)))
-
-    def getListaTokens(self):
-        return self.ListaTokens
-    
-    def getListaErrores(self):
-        return self.ListaErrores
+'''
+def imprimir(self):
+print('Tokens')
+for token in self.listaTokens:
+token.getInfo()
+print()
+print('Errores')
+for token in self.listaErrores:
+token.getInfo()
+print()
+print("Cantidad de tokens: " + str(len(self.listaTokens)))
+print("Cantidad de errores: " + str(len(self.listaErrores)))
+'''

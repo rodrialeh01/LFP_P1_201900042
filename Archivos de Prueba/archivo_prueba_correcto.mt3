@@ -1,4 +1,4 @@
-		replist = 'mi lista 2021 :D' => (
+replist = "mi lista 2021 :D" => (
 	{
 		nombre : 'cancion1',
 		artista: 'u2',
