@@ -1,31 +1,31 @@
-replist = "mi lista 2021 :D" => (
+replist = 'mi lista 2021 :D' => (
 	{
-		nombre : 'cancion1',
-		artista: 'u2',
-		ruta : 'C:\Musica\cancion1.mp3',
-		genero : 'genero1',
-		repetir: 2,
-		anio : 2015
-	},{
-		genero : 'genero2',
-		nombre : 'cancion2',
-		ruta : 'C:\Musica\cancion2.mp3',
+		genero : 'Pop',
+		nombre : 'Señorita',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\Senorita.mp3',
 		repetir: 2,		
-		artista: 'Viento en contra',
-		anio : 2017
+		artista: 'Shawn Mendes, Camila Cabello',
+		anio : 2019
 	},{
-		ruta: 'C:\Musica\cancion3.mp3',
-		repetir: 2,
-		genero : 'genero3',
-		nombre : 'cancion3',
-		anio : 2021,
-		artista: 'JBalvin'
+		nombre : 'good 4 u',
+		artista: 'Olivia Rodrigo',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\Good4U.mp3',
+		genero : 'Pop',
+		repetir: 3,
+		anio : 2021
 	},{
+		nombre : 'Levitating',
+		artista: 'Dua Lipa',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\Levitating.mp3',
+		genero : 'Pop',
+		repetir: 1,
+		anio : 2021
+	},{
+		nombre : 'In Da Getto',
+		artista: 'JBalvin, Skrillex',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\InDaGetto.mp3',
+		genero : 'Electronica',
 		repetir: 2,
-		artista: 'Metallica',
-		nombre : 'cancion4',
-		ruta : 'C:\Musica\cancion4.mp3',
-		anio : 2010,
-		genero : 'genero4'
+		anio : 2021
 	}
 );

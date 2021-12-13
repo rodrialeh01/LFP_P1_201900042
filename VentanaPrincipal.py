@@ -1,8 +1,11 @@
+#------------------------------IMPORTANDO LIBRERIAS------------------------------------
+#tkinter
 import tkinter as tk
 from tkinter import Button, scrolledtext, filedialog, messagebox
 from tkinter import ttk
 from tkinter import *
 from typing import runtime_checkable
+#------------------------------IMPORTANDO CLASES Y VENTANAS----------------------------
 from Reproductor import VentanaReproductor
 from AnalizadorLexico import AnalizadorLexico
 from ReporteTokens import *
@@ -13,16 +16,16 @@ from Cancion import Cancion
 ventana = tk.Tk()
 ventana.title('T3 Musik')
 ventana.geometry('900x600')
-ventana.config(bg='orange')
+ventana.config(bg='black')
 ventana.iconbitmap('icono.ico')
 ventana.resizable(0,0)
 
 #Label de Titulo
-lbltitulo = Label(ventana,text='T3 Musik', font='arial 30 bold', fg='black', bg='orange')
+lbltitulo = Label(ventana,text='T3 Musik', font='arial 30 bold', fg='white', bg='black')
 lbltitulo.place(x=30, y=20)
 
 #CUADRO DE TEXTO
-cuadrot = scrolledtext.ScrolledText(ventana, bg="white", width=70, height=30,font=("arial",10))
+cuadrot = scrolledtext.ScrolledText(ventana, bg="black", fg="white", width=70, height=30,font=("arial",10))
 cuadrot.place(x=30, y=70)
 
 #VARIABLE GLOBAL UE MANTIENE EL CONTENIDO DEL ARCHIVO
@@ -58,9 +61,10 @@ def analizar():
         a.analizar(contenido)
         if len(a.listaErrores) == 0:
             ventana.destroy()   
-            #generararchivoT(a.listaTokens)
+            generararchivoT(a.listaTokens)
             VentanaReproductor(nombreLista(a.listaTokens),aslistacan(aslistanombres(a.listaTokens),aslistaartistas(a.listaTokens),aslistarutas(a.listaTokens),aslistageneros(a.listaTokens),aslistarep(a.listaTokens),aslistaanios(a.listaTokens)))
         else:
+            messagebox.showinfo("Warning","El archivo contiene errores, visualicelo en el reporte")
             generararchivoE(a.listaErrores,a.listaTokens)
     else:
         messagebox.showinfo("Warning","No se puede analizar un archivo inexistente")
@@ -142,11 +146,11 @@ def aslistacan(listan,listaa,listar,listag,listare,listaan):
     return listacanciones
 
 #BOTON DE CARGAR ARCHIVO
-botonca = Button(ventana,text='Cargar Archivo', font='arial 24', command=leerArchivo)
+botonca = Button(ventana,text='Cargar Archivo', font='arial 24', bg="gray", command=leerArchivo)
 botonca.place(x=580,y=70)
 
 #BOTON DE ANALIZAR ARCHIVO
-botonaa = Boton2 = Button(ventana,text='Analizar Archivo', font='arial 24', command=analizar)
+botonaa = Boton2 = Button(ventana,text='Analizar Archivo', font='arial 24', bg="gray", command=analizar)
 Boton2.place(x=580,y=150)
 
 ventana.mainloop()

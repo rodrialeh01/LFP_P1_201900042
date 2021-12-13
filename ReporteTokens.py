@@ -13,7 +13,7 @@ def Inicio():
     <title>Reporte de Tokens</title>
   </head>
   <body>
-    <div class="p-3 mb-2 bg-warning text-dark">
+    <div class="p-3 mb-2 bg-dark text-white">
         <h1><center><img src="Icono.ico" width="150" height="150"> T3 Musik</center></h1>
     </div>
     <div class="p-3 mb-2 text-white" style="background-color:#2ea70d;">
