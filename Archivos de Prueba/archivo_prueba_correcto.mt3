@@ -1,4 +1,4 @@
-replist = 'mi lista 2021 :D' => (
+replist = 'Lista de Prueba de Rodri :D' => (
 	{
 		genero : 'Pop',
 		nombre : 'Señorita',
@@ -25,6 +25,27 @@ replist = 'mi lista 2021 :D' => (
 		artista: 'JBalvin, Skrillex',
 		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\InDaGetto.mp3',
 		genero : 'Electronica',
+		repetir: 2,
+		anio : 2021
+	},{
+		nombre : 'Life Goes On',
+		artista: 'Oliver Tree',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\LifeGoesOn.mp3',
+		genero : 'Pop',
+		repetir: 1,
+		anio : 2021
+	},{
+		nombre : 'STAY',
+		artista: 'The kid LAROI, Justin Bieber',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\STAY.mp3',
+		genero : 'Pop',
+		repetir: 4,
+		anio : 2021
+	},{
+		nombre : 'Mienteme',
+		artista: 'TINI, Maria Becerra',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\Mienteme.mp3',
+		genero : 'Reggaeton',
 		repetir: 2,
 		anio : 2021
 	}

@@ -13,8 +13,8 @@ from PIL import Image, ImageTk, ImageSequence
 #Pygame
 import pygame
 
+#-----------------------------------VARIABLES GLOBALES------------------------------
 listaCanciones = []
-
 ventana = None
 btnplay = None
 btnstop = None
@@ -24,9 +24,9 @@ btnnext = None
 cuadroInfo = None
 cuadrocanciones = None
 labeli = None
-
 pygame.mixer.init()
 
+#METODO PARA MOSTRAR EL GIF EN LA VENTANA
 def mostrargif():
     global labeli
     global ventana
@@ -41,10 +41,11 @@ def mostrargif():
         time.sleep(0.01)
     ventana.after(0,mostrargif)
 
+#METODO QUE MUESTRA EL LISTADO DE CANCIONES DEL REPRODUCTOR
 def cuadroc(ventana):
     global listaCanciones
     global cuadrocanciones
-    #CUADRO DE TEXTO DE LAS CANCIONES CARGADAS AL REPRODUCTOR
+
     cuadrocanciones = Listbox(ventana, bg="black",fg="green", width=25, height=26,font=("arial",12))
     cuadrocanciones.place(x=750, y=10)
 
@@ -124,6 +125,7 @@ def anteriorc():
     cuadrocanciones.activate(a)
     cuadrocanciones.selection_set(a, last=None)
 
+#METODO PARA MOSTRAR LA VENTANA DEL REPRODUCTOR
 def VentanaReproductor(nombrelista, listac):
     #AÑADE LA LISTA INGRESADA A LA LISTA GLOBAL
     global listaCanciones
@@ -136,12 +138,13 @@ def VentanaReproductor(nombrelista, listac):
     global cuadroInfo
     global btnpause
     ventana = tk.Tk()
-    ventana.title('T3 Musik Reproductor de la lista ' + nombrelista)
+    ventana.title('T3 Musik - Reproduciendo la lista: ' + nombrelista)
     ventana.geometry('1000x600')
     ventana.config(bg='black')
     ventana.iconbitmap('icono.ico')
     ventana.resizable(0,0)
 
+    #LLAMA AL APARTADO DONDE APARECE LA LISTA DE CANCIONES
     cuadroc(ventana)
 
     #BOTON PLAY
@@ -165,20 +168,20 @@ def VentanaReproductor(nombrelista, listac):
     btnnext.place(x=810,y=520)
 
     #CUADRO DE TEXTO DE LA INFORMACION DE LA CANCION
-    cuadroInfo = scrolledtext.ScrolledText(ventana, bg="black", fg="green", width=78, height=10,font=("arial",12))
+    cuadroInfo = Text(ventana, bg="black", fg="green", width=78, height=10,font=("arial",12))
     cuadroInfo.place(x=10, y=10)
 
 
-    #IMAGEN PUESTA EN LA VENTANA:
+    #LLAMA AL GIF PARA MOSTRARLO EN LA VENTANA:
     mostrargif()
-    for i in range(len(listaCanciones)):
-        print('Nombre: ' + str(listaCanciones[i].getNombre()))
-        print('Artista: ' + str(listaCanciones[i].getArtista()))
-        print('Ruta: ' + str(listaCanciones[i].getRuta()))
-        print('Genero: ' + str(listaCanciones[i].getGenero()))
-        print('Repetir: ' + str(listaCanciones[i].getRepetir()))
-        print('Año: ' + str(listaCanciones[i].getAnio()))
-        print()
+    #for i in range(len(listaCanciones)):
+    #    print('Nombre: ' + str(listaCanciones[i].getNombre()))
+    #    print('Artista: ' + str(listaCanciones[i].getArtista()))
+    #    print('Ruta: ' + str(listaCanciones[i].getRuta()))
+    #    print('Genero: ' + str(listaCanciones[i].getGenero()))
+    #    print('Repetir: ' + str(listaCanciones[i].getRepetir()))
+    #    print('Año: ' + str(listaCanciones[i].getAnio()))
+    #    print()
 
     ventana.mainloop()
 

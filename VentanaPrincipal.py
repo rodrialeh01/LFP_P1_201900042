@@ -78,7 +78,7 @@ def nombreLista(listap):
         nombrelista = nombrelista.replace(caracteres[i],"")
     return nombrelista
 
-def eliminarparentesis(cadena):
+def eliminarcomillas(cadena):
     caracteres = "\"'"
     for i in range(len(caracteres)):
         cadena = cadena.replace(caracteres[i],"")
@@ -89,7 +89,7 @@ def aslistanombres(listap):
     listaNombres = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_nombre':
-            nombre = eliminarparentesis(listap[i+2].lexema)
+            nombre = eliminarcomillas(listap[i+2].lexema)
             listaNombres.append(nombre)
     return listaNombres
 
@@ -98,7 +98,7 @@ def aslistaartistas(listap):
     listaArtistas = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_artista':
-            artista = eliminarparentesis(listap[i+2].lexema)
+            artista = eliminarcomillas(listap[i+2].lexema)
             listaArtistas.append(artista)
     return listaArtistas
 
@@ -107,7 +107,7 @@ def aslistarutas(listap):
     listaRutas = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_ruta':
-            ruta = eliminarparentesis(listap[i+2].lexema)
+            ruta = eliminarcomillas(listap[i+2].lexema)
             listaRutas.append(ruta)
     return listaRutas
 
@@ -116,7 +116,7 @@ def aslistageneros(listap):
     listaGeneros = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_genero':
-            genero = eliminarparentesis(listap[i+2].lexema)
+            genero = eliminarcomillas(listap[i+2].lexema)
             listaGeneros.append(genero)
     return listaGeneros
 
@@ -125,7 +125,7 @@ def aslistaanios(listap):
     listaAnios = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_anio':
-            anio = eliminarparentesis(listap[i+2].lexema)
+            anio = eliminarcomillas(listap[i+2].lexema)
             listaAnios.append(anio)
     return listaAnios
 
@@ -134,7 +134,7 @@ def aslistarep(listap):
     listaRepetir = []
     for i in range(len(listap)):
         if listap[i].tipo == 'tk_repetir':
-            rep = eliminarparentesis(listap[i+2].lexema)
+            rep = eliminarcomillas(listap[i+2].lexema)
             listaRepetir.append(rep)
     return listaRepetir
 

@@ -5,14 +5,14 @@ list = 'mi lista 2021 :D' > (
 		ruta : 'C:\Musica\cancion1.mp3",
 		genero : 'genero1',
 		repetir: 2,
-		anio : 2015
+		año : 2015
 	],{
 		genero : 'genero2',
 		nombre : 'cancion2',
 		ruta : 'C:\Musica\cancion2.mp3',
 		repetir: 2,		
 		artsta: "Viento en contra',
-		anio : 2017
+		Anio : 2017
 	},{
 		ruta: 'C:\Musica\cancion3.mp3',
 		repetir: 2,

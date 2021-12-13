@@ -1,3 +1,4 @@
+#--------------------------------IMPORTANDO LIBRERIAS Y CLASES-----------------------------
 from Clases import Token, Error
 from tkinter import messagebox
 
@@ -102,12 +103,12 @@ class AnalizadorLexico:
                 elif caracter == '$':
                     buffer = caracter
                     columna += 1
-                    self.listaTokens.append(Token(buffer, 'EOF' , linea, columna))
+                    self.listaTokens.append(Token(buffer, '<< EOF >>' , linea, columna))
                     buffer = ''
                     estado = 'A'
                     messagebox.showinfo("Success","Archivo Analizado con éxito")
                 else:
-                    self.listaErrores.append(Error(caracter,caracter + " no reconocido como token.", 'lexico', linea, columna)) 
+                    self.listaErrores.append(Error(caracter,caracter + " no reconocido como token.", 'Léxico', linea, columna)) 
                     buffer = ''
                     columna += 1 
             elif estado == 'B':
@@ -131,7 +132,7 @@ class AnalizadorLexico:
                     elif buffer == 'anio':
                         self.listaTokens.append(Token(buffer, 'tk_anio', linea, columna))
                     else:
-                        self.listaErrores.append(Error(buffer, buffer + " no esta reconocido como token.", 'lexico', linea, columna))
+                        self.listaErrores.append(Error(buffer, buffer + " no esta reconocido como token.", 'Léxico', linea, columna))
                     buffer = ''
                     estado = 'A'
                     indice -= 1
@@ -148,7 +149,7 @@ class AnalizadorLexico:
                 elif caracter == '"':
                     buffer += caracter
                     columna += 1
-                    self.listaErrores.append(Error(buffer,"La forma de escritura de la cadena es incorrecta.", 'lexico', linea, columna))
+                    self.listaErrores.append(Error(buffer,"La forma de escritura de la cadena es incorrecta.", 'Léxico', linea, columna))
                     buffer = ''
                     estado = 'A'
                 else:
@@ -168,7 +169,7 @@ class AnalizadorLexico:
                 elif caracter == "'":
                     buffer += caracter
                     columna += 1
-                    self.listaErrores.append(Error(buffer, "La forma de escritura de la cadena es incorrecta.", 'lexico', linea, columna))
+                    self.listaErrores.append(Error(buffer, "La forma de escritura de la cadena es incorrecta.", 'Léxico', linea, columna))
                     buffer = ''
                     estado = 'A'
                 else:
