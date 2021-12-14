@@ -3,7 +3,7 @@ contenido = ""
 
 def Inicio():
     global contenido
-    i = """<!doctype html>
+    contenido += """<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,7 +19,6 @@ def Inicio():
     <div class="p-3 mb-2 text-white" style="background-color:#c51212">
         <h1><center>Reporte de Errores</center></h1>
     </div>"""
-    contenido += i
 
 def tablaer(Errores):
     global contenido

@@ -3,7 +3,7 @@ contenido = ""
 
 def Inicio():
     global contenido
-    i = """<!doctype html>
+    contenido+= """<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,7 +19,6 @@ def Inicio():
     <div class="p-3 mb-2 text-white" style="background-color:#2ea70d;">
         <h1><center>Reporte de Tokens</center></h1>
     </div>"""
-    contenido += i
 
 def tablat(Tokens):
     global contenido

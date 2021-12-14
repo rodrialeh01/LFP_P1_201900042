@@ -30,7 +30,7 @@ replist = 'Lista de Prueba de Rodri :D' => (
 	},{
 		nombre : 'Life Goes On',
 		artista: 'Oliver Tree',
-		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\LifeGoesOn.mp3',
+		ruta : 'C:\Users\rodri\OneDrive\Documentos\MusicaPrueba\Life Goes On.mp3',
 		genero : 'Pop',
 		repetir: 1,
 		anio : 2021
