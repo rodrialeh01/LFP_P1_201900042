@@ -37,7 +37,7 @@ def tablaer(Errores):
     contador = 1
     for error in Errores:
         contenido += """
-        <tr class="table-success">
+        <tr class="table-danger">
       <th scope="row">""" + str(contador) + """</th>
       <th>""" + str(error.tipo) + """</th>
       <th>""" + str(error.caracter) + """</th>
