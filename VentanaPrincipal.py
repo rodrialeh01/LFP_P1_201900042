@@ -25,7 +25,7 @@ lbltitulo = Label(ventana,text='T3 Musik', font='arial 30 bold', fg='white', bg=
 lbltitulo.place(x=30, y=20)
 
 #CUADRO DE TEXTO
-cuadrot = scrolledtext.ScrolledText(ventana, bg="black", fg="white", width=70, height=30,font=("arial",10))
+cuadrot = scrolledtext.ScrolledText(ventana, bg="black", fg="white", width=70, height=30,font=("arial",10),state='disabled')
 cuadrot.place(x=30, y=70)
 
 #VARIABLE GLOBAL UE MANTIENE EL CONTENIDO DEL ARCHIVO
@@ -39,14 +39,17 @@ def obtenerruta():
 #FUNCION PARA LEER EL CONTENIDO DEL ARCHIVO CARGADO
 def leerArchivo():
     global contenido
+    global cuadrot
     ruta = obtenerruta()
     if ruta != "":
         archivo = open(ruta,'r')   
         contenido = archivo.read()
+        cuadrot.config(state='normal')
         #print(contenido)
         if cuadrot.get(1.0, END) != "":
             cuadrot.delete(1.0,END)
             cuadrot.insert(tk.INSERT, contenido)
+            cuadrot.config(state='disabled')
         messagebox.showinfo("Success","Archivo cargado")
     else:
         messagebox.showinfo("Warning","No se cargó ningun archivo")
